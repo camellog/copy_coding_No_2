@@ -1,7 +1,13 @@
-const hamburger = document.getElementsByClassName('hamburger');
-const header    = document.getElementById('header');
+const li = document.querySelectorAll('#pickup li');
+const img = document.querySelectorAll('#pickup img');
+let leftstyle = 100;
 
-hamburger[0].addEventListener('click', function () {
-  header.classList.toggle('open');
-});
+for (i = 0; i < li.length; i++){
+  li[i].style.left = `${leftstyle}px`;
+  li[i].style.tr
+  ansform = 'translate( 0 , -50%)';
+  leftstyle += 350;
+  console.log(li[i]);
+}
+
 
