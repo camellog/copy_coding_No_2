@@ -13,6 +13,9 @@ h1,h2{
   text-align: center;
   font-size: 2.5rem;
 }
+img{
+  max-width: 100%;
+}
 html{
   font-size: 62.5%;
   height: 100%;
@@ -162,138 +165,101 @@ main{
 
 /*↓ ------ video-area ------ ↓*/
 .video-area{
-  background-color: blue;
-  height: 745px;
   width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 /*↑ ------ video-area ------ ↑*/
 
 /*↓ ------ main-2 ------ ↓*/
 
-
-/*↓ ------ カルーセルスライダー詳細 ------ ↓*/
-
-#pickup{
-  background-color: red;
+#pickup {
   width: 100%;
-  height: 400px;
+  padding: 100px 0 50px 0;
 }
-#pickup ul{
-  width: 100%;
-  height: 300px;
-  margin: 0 auto;
-  background-color: blue;
-  position: relative;
+#pickup .slick-area {
+  font-size: 0;
 }
-#pickup li {
-  position: absolute;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  max-width: 300px;
+#pickup .slick-area li {
+  padding: 0 30px;
 }
-#pickup img {
-  width: 100%;
-  height: auto;
-  max-width: 300px;
-}
-
-
-/*↑ ------ main-2 ------ ↑*/
 
 /*↑ ------ main-2 ------ ↑*/
 
 /*↓ ------ main-3 ------ ↓*/
 .main-3{
-  margin-top: 90px;
-}
-.container{
-  width: 95%;
-  margin: 0 auto;
+  max-width: 1240px;
+  padding: 100px 16px 50px 16px;
+  margin: -50px auto 10px auto;
 }
 .content-area{
-  margin-top: 30px;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.main-3 img{
-  width: 100%;
-}
-
-.content-area section{
-  max-width: 100%;
-  min-width: 90%;
-  margin-top: 20px;
-  box-shadow: 5px 5px 10px 1px darkgray;
+.main-3 section{
+  box-shadow: 0 0 8px 4px #ccc;
 }
 .sec-textfield{
-  width: 90%;
-  margin: 0 auto;
+  padding: 20px 40px;
 }
-.content-area .sec-textarea{
+.sec-textarea{
   padding-top: 20px;
-  font-size: 1.4rem;
-  font-weight: bold;
 }
-.content-area .sec-date{
-  text-align: right;
+.sec-date{
   padding-top: 20px;
-  padding-bottom: 15px;
-  font-size: 1.4rem;
+  text-align: end;
+}
 
-}
 /*↑ ------ main-3 ------ ↑*/
 
 /*↓ ------ footer ------ ↓*/
+
 footer{
   background-color: black;
   color: white;
-  margin-top: 90px;
-}
-footer h1{
-  font-size: 2.4rem;
-  padding-top: 30px;
+  padding: 20px 10px;
 }
 .foot-flex{
   display: flex;
-  flex-flow: column;
-}
-.foot-textarea{
-  text-align: left;
+  flex-direction: column;
 }
 .foot-textarea p{
-  margin-top: 20px;
+  padding-top: 30px;
 }
 form{
-  margin-top: 30px;
+  margin-top: 20px;
 }
 form input, form textarea{
   width: 100%;
+  box-sizing: border-box;
 }
-form label{
-  margin-top: 15px;
-  display: inline-block;
-}
-form input{
+form input[type='text']{
   height: 40px;
+  font-size: 14px;
 }
 form textarea{
-  height: 70px;
+  height: 65px;
+  font-size: 14px;
 }
-form [type="submit"]{
-  margin: 15px auto 0;
-  width: 100%;
+form input[type='submit']{
   height: 50px;
+  background: black;
   border: solid 1px white;
-  background-color: black;
   color: white;
+  margin-top: 20px;
 }
+
 footer small{
-  display: block;
-  padding-top: 50px;
-  padding-bottom: 10px;
+  display: inline-block;
+  font-size: 12px;
+  width: 100%;
+  margin-top: 50px;
   text-align: center;
-  font-size: 1.2rem;
+
 }
+
+
 /*↑ ------ footer ------ ↑*/
 
 /*↓ ------ メニューの詳細 ------ ↓*/
@@ -303,6 +269,20 @@ footer small{
 /*↑ ------ ニューの詳細 ------ ↑*/
 
 
-@media screen and (max-width: 600px) {
-
+@media screen and (min-width: 600px) {
+  .foot-flex{
+    display: flex;
+    flex-direction: row;
+  }
+  .foot-textarea{
+    width: 50%;
+    padding:0 50px ;
+  }
+  form{
+    padding: 0 50px ;
+    width: 50%;
+  }
+  input[type="submit"]{
+    width: 40%;
+  }
 }

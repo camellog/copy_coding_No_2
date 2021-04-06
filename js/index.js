@@ -1,13 +1,26 @@
-const li = document.querySelectorAll('#pickup li');
-const img = document.querySelectorAll('#pickup img');
-let leftstyle = 100;
-
-for (i = 0; i < li.length; i++){
-  li[i].style.left = `${leftstyle}px`;
-  li[i].style.tr
-  ansform = 'translate( 0 , -50%)';
-  leftstyle += 350;
-  console.log(li[i]);
-}
+const video = document.getElementById('video-area');
 
 
+const menu = document.getElementById('menu');
+const header = document.getElementById('header');
+menu.addEventListener('click', function () {
+  header.classList.toggle('open')
+})
+
+
+
+$('.slick-area').slick({
+  arrows: false,
+  centerMode: true,
+  centerPadding: '10px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        centerPadding: '50px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
